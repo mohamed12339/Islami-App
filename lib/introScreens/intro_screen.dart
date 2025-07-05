@@ -133,7 +133,7 @@ class IntroScreenState extends State<IntroScreen> {
                               curve: Curves.easeInOut,
                             );
                           } : (){
-                      Navigator.pushReplacementNamed(context, Home.routeName);
+                      Navigator.pushReplacementNamed(context, Home.routeName);/// عملت دية عشان بعد اnext يخش علي الصفحة الي فيها الحاجات بقا بتاعة الhome بس كدا
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Color(0xffE2BE7F),
