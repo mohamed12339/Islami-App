@@ -1,0 +1,10 @@
+flutter_native_splash:
+  color: "#202020"
+  image: assets/images/OBJECTS.png
+  branding: assets/images/routegold.png
+
+  android_12:
+    image: assets/images/OBJECTS.png
+    icon_background_color: "#202020"
+
+  web: false
