@@ -9,6 +9,13 @@ static const String icAhadath = "assets/images/ic_ahadath.png";
 static const String islamiLogo = "assets/images/islami_logo.png";
 static const String recentSuraImage = "assets/images/recent_sura_image.png";
 static const String splashImage = "assets/images/Splash image.png";
+static const String suraNumberBg = "assets/images/sura_number.bg.png";
+static const String leftPattern = "assets/images/left-pattern.png";
+static const String mosqueImage = "assets/images/Mosque-image.png";
+static const String rightPattern = "assets/images/right-pattern.png";
+
+
+
 
 
 
