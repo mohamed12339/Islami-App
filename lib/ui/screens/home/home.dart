@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   List<Widget> tabs = [
     QuranTap(),
     AhadathTap(),
-    SebhaTap(),
+    SebhaTab(),
     RadioTap(),
     AzkarTap(),
   ];

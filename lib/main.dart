@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: Splash.routeName,
+      initialRoute: Home.routeName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(canvasColor: AppColors.gold),///دية عشان البار الي تحت مش رضي يغير اللون فعملنا theme and canvas
       routes: {
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         Home.routeName:(context)=>Home(),
         IntroScreen.routeName: (context) => IntroScreen(),
         SuraDetails.routeName: (context) => SuraDetails(),
+
       },
     );
   }

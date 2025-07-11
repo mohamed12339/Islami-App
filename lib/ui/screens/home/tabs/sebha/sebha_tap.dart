@@ -1,10 +1,109 @@
 import 'package:flutter/material.dart';
+import 'package:islami/ui/utiltes/app_assets.dart';
 
-class SebhaTap extends StatelessWidget {
-  const SebhaTap ({super.key});
+class SebhaTab extends StatefulWidget {
+  const SebhaTab({super.key});
+
+  @override
+  State<SebhaTab> createState() => _SebhaTabState();
+}
+
+class _SebhaTabState extends State<SebhaTab> {
+  int counter = 0;
+  int tassbihIndex = 0;
+  double turns = 0;
+
+  final List<String> tassbihList = ['سبحان الله', 'الحمد لله', 'الله أكبر'];
+
+  void handleTap() {
+    counter++;
+    turns += 1 / 33;
+
+    if (counter > 33) {
+      counter = 1;
+      tassbihIndex = (tassbihIndex + 1) % tassbihList.length;
+    }
+    setState(() {});
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(color: Colors.cyanAccent,);
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(AppAssets.sebhaBackground),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: InkWell(
+        onTap: handleTap,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                top: 30,
+                right: 69,
+                left: 70,
+                bottom: 16,
+              ),
+              child: Image.asset(AppAssets.islamiLogo),
+            ),
+            Text(
+              textAlign: TextAlign.center,
+              "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 80,),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                AnimatedRotation(
+                  turns: turns,
+                    duration: Duration(milliseconds: 300),
+              // الايد بتلف
+                child:Transform.translate(
+                  offset: Offset(0, -450/2 +12),
+                  child: Image.asset(
+                    AppAssets.sebhaHand,
+                    width: 100,
+                  ),
+                ),
+                ),
+                Padding(
+                  padding:  EdgeInsets.all(16),
+                  child: Image.asset(AppAssets.sebhaTurns),
+                ),
+
+                Column(
+                  children: [
+                    Text(
+                      tassbihList[tassbihIndex],
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "$counter",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
