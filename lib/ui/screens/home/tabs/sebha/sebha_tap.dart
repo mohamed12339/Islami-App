@@ -29,6 +29,7 @@ class _SebhaTabState extends State<SebhaTab> {
 
   @override
   Widget build(BuildContext context) {
+    var dy = -450/2+12 ;
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -62,21 +63,23 @@ class _SebhaTabState extends State<SebhaTab> {
             Stack(
               alignment: Alignment.center,
               children: [
-                AnimatedRotation(
-                  turns: turns,
-                    duration: Duration(milliseconds: 300),
-              // الايد بتلف
-                child:Transform.translate(
-                  offset: Offset(0, -450/2 +12),
-                  child: Image.asset(
-                    AppAssets.sebhaHand,
-                    width: 100,
+                Transform.translate(///بتزيح الايد او بتنقلها يعني ومش لاقي حل غيرها
+                  offset: Offset(0, dy), ///dy is the vertical component
+                  child: Image.asset(AppAssets.sebhaHand ,
+                   width: 100,
                   ),
                 ),
-                ),
-                Padding(
-                  padding:  EdgeInsets.all(16),
-                  child: Image.asset(AppAssets.sebhaTurns),
+                AnimatedRotation(
+                  turns: turns,
+                  duration: Duration(milliseconds: 300),
+                  // الدايرة بتلف
+                  child: Padding(
+                    padding:  EdgeInsets.all(16),
+                    child: Image.asset(
+                      AppAssets.sebhaTurns,
+                      width: 500,
+                    ),
+                  ),
                 ),
 
                 Column(
