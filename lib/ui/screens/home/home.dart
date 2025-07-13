@@ -18,9 +18,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIndex = 0;
-
-  /// هنا انا عملت فريابل عشان لما النستخدم يختار ايكون
+  int selectedIndex = 0;/// هنا انا عملت فريابل عشان لما النستخدم يختار ايكون
   List<Widget> tabs = [
     QuranTap(),
     AhadathTap(),
@@ -99,9 +97,7 @@ class _HomeState extends State<Home> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
       decoration: BoxDecoration(
-        color: isSelected ? AppColors.blackWithOpacity60 : Colors.transparent,
-
-        ///يبقا هنا انا بقولوا لو المستخدم داس علي ايكونة يبقا اللون يظهر والباقي شفاف
+        color: isSelected ? AppColors.blackWithOpacity60 : Colors.transparent,///يبقا هنا انا بقولوا لو المستخدم داس علي ايكونة يبقا اللون الكونتينر يظهر والباقي شفاف
         borderRadius: BorderRadius.circular(16),
       ),
       child: ImageIcon(AssetImage(icon)),

@@ -16,6 +16,7 @@ static const String rightPattern = "assets/images/right-pattern.png";
 static const String  sebhaBackground = "assets/images/sebha_background.png";
 static const String  sebhaHand = "assets/images/sebha_hand.png";
 static const String sebhaTurns = "assets/images/sebha_turns.png";
+static const String hadethBg = "assets/images/hadeth_bg.png";
 
 
 
